@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .rtl {
+    direction: rtl;
+  }
+  .ltr {
+    direction: ltr;
+  }
+  pre {
+    background: #f3ecec;
+    border-radius: 8px;
+    padding: 3px 5px; /* Light grey background */
+    width: "100%";
+  }
+}
