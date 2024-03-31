@@ -1,17 +1,13 @@
 // components/CustomTextField.tsx
 
-import { useTheme } from "@emotion/react"
 import { Box, TextareaAutosize } from "@mui/material"
-import { Button } from "antd"
 import { useFormik } from "formik"
 import { useEffect } from "react"
 import { BsFillSendFill } from "react-icons/bs"
 import { useDispatch } from "react-redux"
 
 import { useLangRedux } from "~helper/getLanguageStates"
-import { useGetChat, useStreamData } from "~helper/translateApi"
 import {
-  setChatConversation,
   setChatText,
   setCommand,
   setConvertation,
@@ -22,9 +18,6 @@ import {
 const WriteAboutTextField: React.FC = () => {
   const { chatText, converstaion, textFromHtml, command, fetching } =
     useLangRedux()
-  // const { data, error, isFetching, refetch } = useGetChat(chatText, command)
-  // const message = useStreamData(chatText, command)
-  // console.log("message is ", message)
 
   const dispatch = useDispatch()
   const {
@@ -52,39 +45,7 @@ const WriteAboutTextField: React.FC = () => {
   useEffect(() => {
     console.log("chat text is ", chatText)
   }, [chatText])
-  // useEffect(() => {
-  //   if (chatText.length > 0) {
-  //     refetch()
-  //   }
-  // }, [chatText])
-  // useEffect(() => {
-  //   if (message && !fetching) {
-  //     dispatch(setChatConversation(message))
-  //     dispatch(setConvertation({ type: "res", text: message }))
-  //     console.log("message to be saved is", message)
-  //   }
-  //   console.log("fetch is changed to", fetching)
-  // }, [fetching])
-  // useEffect(() => {
-  //   console.log("data changed", data)
 
-  //   if (data && data.choices && !isFetching) {
-  //     dispatch(setChatConversation(data.choices[0].message.content))
-  //     dispatch(
-  //       setConvertation({ type: "res", text: data.choices[0].message.content })
-  //     )
-  //   }
-  //   console.log("converstaion is :", converstaion)
-  // }, [data])
-  // useEffect(() => {
-  //   console.log("data changed", data)
-
-  //   if (message) {
-  //     dispatch(setChatConversation(message))
-  //     dispatch(setConvertation({ type: "res", text: message }))
-  //   }
-  //   console.log("converstaion is :", converstaion)
-  // }, [message])
   return (
     <div className="  w-[95%] lg:w-[90%]    ">
       <form onSubmit={handleSubmit}>

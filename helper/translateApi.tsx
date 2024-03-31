@@ -55,24 +55,6 @@ export const useGetChat = (text: string, command: string) => {
   return { data, refetch, error, isFetching }
 }
 
-// export const getModels = async () => {
-//   try {
-//     const response = fetch("https://api.deepseek.com/v1/models", {
-//       method: "GET",
-//       headers: {
-//         "Content-Type": "application/json",
-//         Authorization: `Bearer ${apiKey}`,
-//       },
-//     });
-
-//     const data = (await response).json();
-//     // console.log("models are", data);
-
-//     return data;
-//   } catch (error) {
-//     return "Translation failed";
-//   }
-// };
 export const useStreamData = (text: string, command: string) => {
   const dispatch = useAppDispatch()
   const { chatText, fetching } = useLangRedux()

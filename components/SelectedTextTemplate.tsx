@@ -9,7 +9,6 @@ import {
 import { useAppDispatch } from "~StateManagment/store"
 
 export default function SelectedTextTemplate({ text }: { text: string }) {
-  const [open, setOpen] = useState(true)
   const { selectedTextTemplateOpen } = useLangRedux()
 
   const dispatch = useAppDispatch()
