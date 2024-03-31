@@ -2,7 +2,6 @@
 
 import { Box, TextareaAutosize } from "@mui/material"
 import { useFormik } from "formik"
-import { useEffect } from "react"
 import { BsFillSendFill } from "react-icons/bs"
 import { useDispatch } from "react-redux"
 
@@ -16,13 +15,12 @@ import {
 } from "~StateManagment/LanguageSlice"
 
 const WriteAboutTextField: React.FC = () => {
-  const { chatText, converstaion, textFromHtml, command, fetching } =
-    useLangRedux()
+  const { textFromHtml } = useLangRedux()
 
   const dispatch = useDispatch()
   const {
     values,
-    errors,
+
     handleSubmit,
     handleBlur,
     handleChange,
@@ -40,8 +38,6 @@ const WriteAboutTextField: React.FC = () => {
       setFieldValue("text", "")
     }
   })
-
-  useEffect(() => {}, [chatText])
 
   return (
     <div className="  w-[95%] lg:w-[90%]    ">

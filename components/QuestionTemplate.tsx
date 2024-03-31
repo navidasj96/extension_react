@@ -5,7 +5,6 @@ import { IoPencilSharp } from "react-icons/io5"
 import { MdFormatQuote } from "react-icons/md"
 
 export default function QuestionTemplate({ text }: { text: string }) {
-  // const [showToolbar , setShowToolbar] = useState(false)
   const toolbar = (
     <div className="h-[20px] bg-white rounded-lg inline-flex flex-row items-center font-[14px] w-[100px] justify-between  ">
       <MdFormatQuote />

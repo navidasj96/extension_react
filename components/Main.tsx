@@ -16,7 +16,6 @@ import InputBoxSection from "./InputBoxSection"
 import MainNavbar from "./MainNavbar"
 
 function Main() {
-  //handle history drawer
   const dispatch = useAppDispatch()
 
   //get some neccessary states with useLang hook

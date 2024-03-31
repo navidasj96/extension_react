@@ -13,7 +13,6 @@ export default function SelectedTextTemplate({ text }: { text: string }) {
 
   const dispatch = useAppDispatch()
 
-  // const [showToolbar , setShowToolbar] = useState(false)
   return (
     <div
       className={`w-[100%] flex items-center flex-row gap-[24px] justify-between box-border ltr ${!selectedTextTemplateOpen && "hidden"}`}>

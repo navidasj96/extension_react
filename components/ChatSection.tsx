@@ -11,9 +11,8 @@ interface Props {
   isFetching?: any
 }
 
-export default function ChatSection({ chats, isFetching }: Props) {
-  const { selectedTextTemplateOpen, converstaion, textFromHtml } =
-    useLangRedux()
+export default function ChatSection({ chats }: Props) {
+  const { selectedTextTemplateOpen, textFromHtml } = useLangRedux()
   return (
     <div className="relative h-[70%]  w-full   bg-[#F4F4F5] ">
       {chats && (

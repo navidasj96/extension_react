@@ -11,27 +11,22 @@ import {
 import {
   setChatHistoryClose,
   setConversationFromHistory,
-  setConvertation,
-  setDisplayedChatId,
-  type Conversation
+  setDisplayedChatId
 } from "~StateManagment/LanguageSlice"
 import { useAppDispatch } from "~StateManagment/store"
 
 export default function ChatHistory() {
-  const { converstaion, chatHistoryOpen } = useLangRedux()
+  const { chatHistoryOpen } = useLangRedux()
   const [locaChats, setLocatChats] = useState([])
-  // console.log("locaChats", locaChats)
   useEffect(() => {
     SetStorageBegoreUnmount()
   }, [])
   const dispatch = useAppDispatch()
   useEffect(() => {
     const storageChats = getLocalStorageChats()
-    // console.log("storageChats", storageChats)
 
     // @ts_ignore
     setLocatChats(storageChats)
-    // console.log("storageChats", storageChats)
   }, [])
 
   const onClose = () => {

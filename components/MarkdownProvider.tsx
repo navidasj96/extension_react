@@ -51,23 +51,3 @@ const MarkdownRenderer: React.FC<MarkdownProps> = ({ markdownText }) => {
 }
 
 export default MarkdownRenderer
-
-// import React from "react"
-// import ReactMarkdown from "react-markdown"
-// import { Prism as SyntaxHighlighter } from "react-syntax-highlighter"
-// import { dark } from "react-syntax-highlighter/dist/esm/styles/prism"
-
-// const MarkdownRenderer = ({ markdownText }) => {
-//   // Define a custom renderer for code blocks
-//   const renderers = {
-//     code: ({ language, value }) => {
-//       return (
-//         <SyntaxHighlighter style={dark} language={language} children={value} />
-//       )
-//     }
-//   }
-
-//   return <ReactMarkdown renderers={renderers} children={markdownText} />
-// }
-
-// export default MarkdownRenderer
