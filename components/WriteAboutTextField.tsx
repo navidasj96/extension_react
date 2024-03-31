@@ -33,7 +33,6 @@ const WriteAboutTextField: React.FC = () => {
       text: ""
     },
     onSubmit: async (values) => {
-      console.log("write about me values", values)
       dispatch(setCommand(""))
 
       dispatch(setChatText(values.text))
@@ -42,9 +41,7 @@ const WriteAboutTextField: React.FC = () => {
     }
   })
 
-  useEffect(() => {
-    console.log("chat text is ", chatText)
-  }, [chatText])
+  useEffect(() => {}, [chatText])
 
   return (
     <div className="  w-[95%] lg:w-[90%]    ">

@@ -97,9 +97,7 @@ export const useStreamData = (text: string, command: string) => {
         method: "POST",
         headers,
         body: JSON.stringify(requestData),
-        onclose() {
-          console.log("connection closed")
-        },
+        onclose() {},
         onmessage(event) {
           // console.log("event is", event.data);
           // console.log(
@@ -120,7 +118,6 @@ export const useStreamData = (text: string, command: string) => {
       // dispatch(setFetchingFalse())
     }
     if (chatText.length === 0) return
-    console.log("counter is", counter)
 
     fetchDataStream()
   }, [chatText])

@@ -29,9 +29,7 @@ export default function ChatWrapperSection() {
     if (message && !fetching) {
       dispatch(setChatConversation(message))
       dispatch(setConvertation({ type: "res", text: message }))
-      console.log("message to be saved is", message)
     }
-    console.log("fetch is changed to", fetching)
   }, [fetching])
   return (
     <div className="flex h-full w-full pb-4 flex-col-reverse gap-4 space-y-5 overflow-y-auto overflow-x-hidden mt-5 overscroll-contain">
